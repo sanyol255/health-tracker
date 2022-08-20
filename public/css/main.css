@@ -1,0 +1,12 @@
+body {
+    font-family: 'Charis SIL', serif;
+    background-color: #ffffcc;
+    color: #000066;
+}
+h1 {
+    text-align: center;
+}
+.main-page-text {
+    text-align: center;
+    font-size: 1.25em;
+}
