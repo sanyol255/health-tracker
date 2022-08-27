@@ -55,6 +55,12 @@ footer {
     justify-content: center;
     align-items: center;
 }
-.health-tests button {
+.health-tests a {
     margin-right: 5em;
+}
+.tests-info {
+    font-size: 1.1em;
+}
+.indent {
+    text-indent: 2em;
 }
