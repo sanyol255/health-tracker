@@ -14,7 +14,7 @@
     short stature, or unusually high muscle mass.</p>
 </article>
 
-{{ Aire::open()->route('bmi.create') }}
+{{ Aire::open()->route('bmi.store') }}
     <section class="bmi-form">
         <h2 class="text-center">Enter your body weight and height: </h2>
         {{ Aire::number('weight', 'Weight(kg)')->id('weight')->groupClass('ms-5')->placeholder('65')->step(0.1) }}

@@ -24,8 +24,8 @@ Route::view('/', 'main-page')->name('main-page');
 Route::get('/tests', [HealthTestsController::class, 'index'])->name('health-tests.index');
 
 
-Route::get('/tests/bmi', [BmiController::class, 'index'])->name('bmi.index');
-Route::post('/tests/bmi', [BmiController::class, 'create'])->name('bmi.create');
+Route::get('/tests/bmi', [BmiController::class, 'create'])->name('bmi.create');
+Route::post('/tests/bmi', [BmiController::class, 'store'])->name('bmi.store');
 
 Route::get('/workout', 'WorkoutController@index')->name('workout.index');
 Route::get('/nutrition', 'NutritionController@index')->name('nutrition.index');
