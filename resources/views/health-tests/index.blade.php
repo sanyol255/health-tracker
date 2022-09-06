@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title', 'Health checking tests')
+
 @section('content')
 <h1>Health tests</h1>
 <section class="health-tests">

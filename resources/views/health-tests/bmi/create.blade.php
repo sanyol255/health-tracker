@@ -1,5 +1,5 @@
 @extends('layouts.main')
-
+@section('title', 'Body mass index')
 <h1>Body mass index</h1>
 <article class="container tests-info">
     <p class="indent"><strong>Body mass index (BMI)</strong> is a value derived from the mass (weight) and height of a person.
