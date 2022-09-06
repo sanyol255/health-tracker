@@ -9,5 +9,5 @@ class BodyMassIndex extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['weight', 'height'];
+    protected $fillable = ['first_name', 'last_name', 'weight', 'height'];
 }

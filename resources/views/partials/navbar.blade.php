@@ -6,6 +6,7 @@
             <a href="{{ route('workout.index') }}">Workout exercises</a>
             <a href="{{ route('nutrition.index') }}">Healthy food and vitamins</a>
             <a href="{{ route('general.index') }}">General advices</a>
+            <a href="{{ route('login') }}">Login/Sign up</a>
         </li>
     </ul>
 </nav>

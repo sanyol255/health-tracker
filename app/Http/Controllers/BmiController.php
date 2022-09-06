@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BodyMassIndex;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BmiController extends Controller
 {
@@ -20,6 +21,8 @@ class BmiController extends Controller
         ]);
 
         $bmi = new BodyMassIndex([
+            'first_name' => Auth::user()->first_name,
+            'last_name' => Auth::user()->last_name,
             'weight' => $request->get('weight'),
             'height' => $request->get('height')
         ]);
