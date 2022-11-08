@@ -22,6 +22,7 @@ return new class extends Migration
             $table->double('height', 3, 2)->nullable();
             $table->double('bmi', 4, 2)->nullable();
             $table->string('description', 100)->nullable();
+            $table->integer('user_id')->nullable();
         });
     }
 
