@@ -18,14 +18,21 @@ nav {
     top: 0;
     width: 100%;
 }
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .navigation li {
     list-style-type: none;
-    padding-top: .2em;
+    margin-top: 1.2em;
 }
 .navigation li a {
-    margin-left: 6em;
     color: white;
     text-decoration: none;
+    padding-right: 5em;
+    font-size: 1.1em;
 }
 li a:hover {
     text-decoration: none;
@@ -40,4 +47,20 @@ footer {
     height: 3em;
     text-align: center;
     padding-top: .5em;
+}
+.health-tests{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.health-tests a {
+    margin-right: 5em;
+}
+.tests-info {
+    font-size: 1.1em;
+}
+.indent {
+    text-indent: 2em;
 }
