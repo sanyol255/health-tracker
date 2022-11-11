@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ruffier_test', function (Blueprint $table) {
+        Schema::create('ruffier_tests', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('first_name', 50)->default('');
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ruffier_test');
+        Schema::dropIfExists('ruffier_tests');
     }
 };
