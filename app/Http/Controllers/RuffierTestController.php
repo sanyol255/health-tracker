@@ -44,4 +44,9 @@ class RuffierTestController extends Controller
         session()->flash('success', 'Your ruffier index was successfully saved');
         return redirect('/tests');
     }
+
+    public function show($userId)
+    {
+        return RuffierTest::where('user_id', $userId)->latest()->first();
+    }
 }
