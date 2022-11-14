@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HealthTestsController;
 use App\Http\Controllers\BmiController;
+use App\Http\Controllers\RuffierTestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,9 @@ Route::get('/tests', [HealthTestsController::class, 'index'])->name('health-test
 
 Route::get('/tests/bmi', [BmiController::class, 'create'])->name('bmi.create');
 Route::post('/tests/bmi', [BmiController::class, 'store'])->name('bmi.store');
+
+Route::get('tests/ruffier', [RuffierTestController::class, 'create'])->name('ruffier.create');
+Route::post('tests/ruffier', [RuffierTestController::class, 'store'])->name('ruffier.store');
 
 Route::get('/workout', 'WorkoutController@index')->name('workout.index');
 Route::get('/nutrition', 'NutritionController@index')->name('nutrition.index');

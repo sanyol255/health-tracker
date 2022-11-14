@@ -19,6 +19,6 @@
         <h2 class="text-center">Enter your body weight and height: </h2>
         {{ Aire::number('weight', 'Weight(kg)')->id('weight')->groupClass('ms-5')->placeholder('65')->step(0.1) }}
         {{ Aire::number('height', 'Height(m)')->id('height')->groupClass('ms-5')->placeholder('1.75')->step(0.01) }}
-        {{ Aire::submit('Calculate body mass index')->addClass('ms-5 btn btn-success') }}
+        {{ Aire::submit('Calculate body mass index')->addClass('ms-5 mb-5 btn btn-success') }}
     </section>
 {{ Aire::close() }}
