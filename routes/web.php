@@ -1,12 +1,13 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HealthTestsController;
 use App\Http\Controllers\BmiController;
-use App\Http\Controllers\RuffierTestController;
+use App\Http\Controllers\HealthTestsController;
 use App\Http\Controllers\HypoxiaTestController;
+use App\Http\Controllers\RuffierTestController;
 use App\Http\Controllers\Workout\MainWorkoutController;
-use App\Http\Controllers\PushupsController;
+use App\Http\Controllers\Workout\PushupsController;
+use App\Http\Controllers\Workout\RegularPushupsController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,11 +40,13 @@ Route::post('tests/hypoxia', [HypoxiaTestController::class, 'store'])->name('hyp
 Route::get('/workout', [MainWorkoutController::class, 'index'])->name('workout.index');
 
 Route::get('/workout/push-ups', [PushupsController::class, 'index'])->name('push-ups.index');
-Route::get('push-ups/regular', [RegularPushupsController::class, 'index'])->name('regular-push-ups.index');
+
+Route::get('push-ups/regular', [RegularPushupsController::class, 'create'])->name('regular-push-ups.create');
+Route::post('push-ups/regular', [RegularPushupsController::class, 'store'])->name('regular-push-ups.store');
+
+
 Route::get('push-ups/wide', [WidePushupsController::class, 'index'])->name('wide-push-ups.index');
 Route::get('push-ups/diamond', [DiamondPushupsController::class, 'index'])->name('diamond-push-ups.index');
-Route::get('push-ups/rotate', [RotatePushupsController::class, 'index'])->name('rotate-push-ups.index');
-Route::get('push-ups/side', [SidePushupsController::class, 'index'])->name('side-push-ups.index');
 
 
 Route::get('/nutrition', 'NutritionController@index')->name('nutrition.index');
