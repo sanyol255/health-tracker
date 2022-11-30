@@ -25,7 +25,7 @@ $user = Auth::user();
             </div>
             <h3>BMI: {{ $bmiData->bmi ??  '' }} ({{ $bmiData->description ?? '' }})</h3>
             <h3>Ruffier Index: {{ $ruffierIndex->result ??  '' }} ({{ $ruffierIndex->description ?? '' }})</h3>
-            <h3>Hypoxia test: {{ $hypoxiaTest->total_score }} ({{ $hypoxiaTest->total_info ?? '' }})</h3>
+            <h3>Hypoxia test: {{ $hypoxiaTest->total_score ?? '' }} ({{ $hypoxiaTest->total_info ?? '' }})</h3>
         </div>
     </div>
 </div>

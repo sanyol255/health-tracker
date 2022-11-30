@@ -7,6 +7,7 @@ use App\Http\Controllers\RuffierTestController;
 use App\Http\Controllers\Workout\MainWorkoutController;
 use App\Http\Controllers\Workout\PushupsController;
 use App\Http\Controllers\Workout\RegularPushupsController;
+use App\Http\Controllers\Workout\StatisticsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,6 +39,7 @@ Route::get('tests/hypoxia', [HypoxiaTestController::class, 'create'])->name('hyp
 Route::post('tests/hypoxia', [HypoxiaTestController::class, 'store'])->name('hypoxia.store');
 
 Route::get('/workout', [MainWorkoutController::class, 'index'])->name('workout.index');
+Route::get('/workout/statistics', [StatisticsController::class, 'show_statistics'])->name('workout.statistics');
 
 Route::get('/workout/push-ups', [PushupsController::class, 'index'])->name('push-ups.index');
 
