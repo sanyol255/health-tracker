@@ -7,6 +7,7 @@ use App\Http\Controllers\RuffierTestController;
 use App\Http\Controllers\Workout\MainWorkoutController;
 use App\Http\Controllers\Workout\PushupsController;
 use App\Http\Controllers\Workout\RegularPushupsController;
+use App\Http\Controllers\Workout\WidePushupsController;
 use App\Http\Controllers\Workout\StatisticsController;
 use Illuminate\Support\Facades\Route;
 
@@ -47,7 +48,9 @@ Route::get('push-ups/regular', [RegularPushupsController::class, 'create'])->nam
 Route::post('push-ups/regular', [RegularPushupsController::class, 'store'])->name('regular-push-ups.store');
 
 
-Route::get('push-ups/wide', [WidePushupsController::class, 'index'])->name('wide-push-ups.index');
+Route::get('push-ups/wide', [WidePushupsController::class, 'create'])->name('wide-push-ups.create');
+Route::post('push-ups/wide', [WidePushupsController::class, 'store'])->name('wide-push-ups.store');
+
 Route::get('push-ups/diamond', [DiamondPushupsController::class, 'index'])->name('diamond-push-ups.index');
 
 

@@ -10,13 +10,13 @@ class Tests
         $bmi = round($bmi, 1);
 
         if($bmi < 18.5){
-            $result = 'Індекс маси тіла нижче норми - недостатня вага';
+            $result = 'The body mass index is less than normal level - underweight';
         }
         else if($bmi > 25){
-            $result = 'Індекс маси тіла вище норми - надмірна вага';
+            $result = 'The body mass index is greater than normal level - overweight';
         }
         else{
-            $result = 'Індекс маси тіла в нормі';
+            $result = 'The body mass index is normal';
         }
 
         return [$bmi, $result];
@@ -29,19 +29,19 @@ class Tests
 
         switch ($ruffierIndex['result']) {
             case $ruffierIndex['result'] <= 3:
-                $ruffierIndex['description'] = 'Хороша фізична працездатність';
+                $ruffierIndex['description'] = 'Good physical level';
             break;
             case $ruffierIndex['result'] <= 6:
-                $ruffierIndex['description'] = 'Середня фізична працездатність';
+                $ruffierIndex['description'] = 'Average physical level';
             break;
             case $ruffierIndex['result'] <= 9:
-                $ruffierIndex['description'] = 'Задовільна фізична працездатність';
+                $ruffierIndex['description'] = 'Acceptable physical level';
             break;
             case $ruffierIndex['result'] <= 14:
-                $ruffierIndex['description'] = 'Погана фізична працездатність - середня серцева недостатність';
+                $ruffierIndex['description'] = 'Bad physical level';
             break;
             default:
-                $ruffierIndex['description'] = 'Дуже погана фізична працездатність- сильна серцева недостатність';
+                $ruffierIndex['description'] = 'Very bad physical level';
         }
 
         return $ruffierIndex;
