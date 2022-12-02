@@ -69,3 +69,8 @@ footer {
     border: thin solid green;
     padding: .5em;
 }
+.stat-table {
+    width: 15%;
+    float: left;
+}
+

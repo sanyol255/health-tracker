@@ -29,6 +29,6 @@ class RegularPushupsController extends Controller
         $regular->save();
 
         session()->flash('saved', 'Amount of regular push ups was saved');
-        return redirect('/workout');
+        return redirect('/push-ups/regular');
     }
 }
