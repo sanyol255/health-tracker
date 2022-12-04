@@ -72,5 +72,6 @@ footer {
 .stat-table {
     width: 15%;
     float: left;
+    margin-bottom: 3rem;
 }
 
