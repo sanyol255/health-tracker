@@ -37,4 +37,19 @@ use Illuminate\Support\Facades\Auth;
             </tr>
         @endforeach
     </table>
+    <table class="stat-table col-2">
+        <tr>
+            <th colspan="2" class="text-center">Squats</th>
+        </tr>
+        <tr>
+            <th>Date and time</th>
+            <th>Amount</th>
+        </tr>
+        @foreach ($squats as $squatsAmount)
+            <tr>
+                <td>{{ $squatsAmount['created_at']->format('d/m/Y H:i') }}</td>
+                <td>{{ $squatsAmount['amount'] }}</td>
+            </tr>
+        @endforeach
+    </table>
 @endsection

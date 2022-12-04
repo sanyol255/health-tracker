@@ -8,6 +8,7 @@ use App\Http\Controllers\Workout\MainWorkoutController;
 use App\Http\Controllers\Workout\PushupsController;
 use App\Http\Controllers\Workout\RegularPushupsController;
 use App\Http\Controllers\Workout\WidePushupsController;
+use App\Http\Controllers\Workout\SquatsController;
 use App\Http\Controllers\Workout\StatisticsController;
 use Illuminate\Support\Facades\Route;
 
@@ -46,13 +47,11 @@ Route::get('/workout/push-ups', [PushupsController::class, 'index'])->name('push
 
 Route::get('push-ups/regular', [RegularPushupsController::class, 'create'])->name('regular-push-ups.create');
 Route::post('push-ups/regular', [RegularPushupsController::class, 'store'])->name('regular-push-ups.store');
-
-
 Route::get('push-ups/wide', [WidePushupsController::class, 'create'])->name('wide-push-ups.create');
 Route::post('push-ups/wide', [WidePushupsController::class, 'store'])->name('wide-push-ups.store');
 
-Route::get('push-ups/diamond', [DiamondPushupsController::class, 'index'])->name('diamond-push-ups.index');
-
+Route::get('workout/squats', [SquatsController::class, 'create'])->name('squats.create');
+Route::post('workout/squats', [SquatsController::class, 'store'])->name('squats.store');
 
 Route::get('/nutrition', 'NutritionController@index')->name('nutrition.index');
 Route::get('/general', 'GeneralController@index')->name('general.index');
